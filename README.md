@@ -24,3 +24,16 @@
 6. serviceの作成  
   menuの選択をmainに反映できるよう、serviceを作成  
   `ng generate service menu/menu`
+
+
+## Angularのディレクトリ構成について
+- 基本的に`/src/app/`配下を作成・編集
+- `src/app/app-routing` ⇨ 画面のルーティングに使用
+- `src/app/app.module.ts` ⇨ モジュールをインポートする際使用
+- `src/app/app.component.html` ⇨ 各コンポーネントの読み込み（大元のhtmlファイル）
+
+## 今後の開発の流れ
+- `ng generate`コマンドでコンポーネント作成
+- 作成したコンポーネントを`src/app/app.component.html`へ追加
+- 各コンポーネント内でcssの調整や関数定義を行う
+- コンポーネント間の共有が必要な場合は適宜serviceを利用する
