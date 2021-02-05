@@ -1,0 +1,86 @@
+.menu-warpper {
+    background-color: rgb(233, 227, 227);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    font-size: 0.9em;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a li:hover {
+    background: #aca8a8;
+}
+
+li a:hover {
+    background: #aca8a8;
+}
+
+#accordion_parent>li {
+    border: #ccc 1px solid;
+    margin-bottom: -1px;
+}
+
+#accordion_parent a,  #accordion_child a {
+    color: #7484c4;
+}
+
+#accordion_parent a[data-toggle="collapse"] {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    position: relative;
+}
+
+#accordion_parent a[data-toggle="collapse"]::after,
+#accordion_child a[data-toggle="collapse"]::after {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-top: #666 1px solid;
+    border-right: #666 1px solid;
+    position: absolute;
+    right: 15px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+#accordion_parent a[aria-expanded=false]::after, 
+#accordion_child a[aria-expanded=false]::after {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    transition-duration: 0.3s;
+}
+
+#accordion_parent a[aria-expanded=true]::after, 
+#accordion_child a[aria-expanded=true]::after {
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg);
+    transition-duration: 0.3s;
+}
+
+
+#accordion_child a[data-toggle="collapse"] {
+    padding: 0;
+}
+
+
+
+[id^="menu"] li {
+    padding: 10px 10px 10px 20px;
+}
